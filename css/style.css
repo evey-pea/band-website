@@ -1,0 +1,132 @@
+html {
+    color: #f5f5f5; 
+    background-color: #000080;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    background: url(/assets/Sithu_Aye_@_Euroblast_2016_58.jpg) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: #000000 0px 0px 15px;
+}
+
+main {
+    margin: 5%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 80px; 
+}
+
+main p {
+    text-align: left;
+    margin: 5% 10%;
+    word-wrap: break-word;
+    width: 80%;
+
+}
+
+header .navbar {
+    position: sticky;
+    text-align: center;
+    font-size: 2em;
+    list-style-type: none;
+}
+
+.navbar li, .navbar a {
+    min-width: 80px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    border-radius: 20px;
+    color: #000080;
+    background-color: #f5f5f5;
+}
+
+.navbar .activepage a {
+    color: #000000;
+    background-color: #f5f5f5;
+    border-radius: 20px 20px 0px 0px;
+    text-shadow: black 0px 0px 0px;
+}
+
+main img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5%;
+}
+header .navbar li {
+    display: inline-block;
+}
+
+header .navbar a {
+    display: block;
+    text-decoration: none;
+    color: #f5f5f5;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 0px 0px 20px 20px;
+    text-shadow: #000000 0px 0px 4px;
+    box-shadow: #000000 10px 10px 4px;
+}
+
+.landing {
+    padding: auto;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto auto auto;
+}
+
+.landing img {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.landing p {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    /* grid-row-start: 1;
+    grid-row-end: 2;    */
+}
+
+
+
+.album {
+    display: inline-block;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    color: #000088;
+    padding 25px;
+    margin: 20px;
+    box-shadow: #8080f5 10px 10px 25px;
+    text-align: center;
+}
+
+.album img {
+    box-shadow: #000080 10px 10px 10px;
+}
+
+.album li{
+    text-align: left;
+}
+
+.album h2, h3 {
+    text-align: center;
+    display: inline-flexbox;
+}
+
+footer {
+    height: 100px;
+    margin-top: 200pX;
+    
+}
