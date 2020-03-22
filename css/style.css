@@ -1,13 +1,13 @@
 html {
     color: #f5f5f5; 
-    background-color: #000080;
+    background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     text-align: center;
     background: url(/assets/Sithu_Aye_@_Euroblast_2016_58.jpg) center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    margin: 0px;   
 }
 
 h1 {
@@ -31,36 +31,11 @@ main p {
 }
 
 header .navbar {
-    position: sticky;
     text-align: center;
     font-size: 2em;
     list-style-type: none;
 }
 
-.navbar li, .navbar a {
-    min-width: 80px;
-    margin-top: 10px;
-    padding: 15px;
-}
-
-.navbar a:hover {
-    border-radius: 20px;
-    color: #000080;
-    background-color: #f5f5f5;
-}
-
-.navbar .activepage a {
-    color: #000000;
-    background-color: #f5f5f5;
-    border-radius: 20px 20px 0px 0px;
-    text-shadow: black 0px 0px 0px;
-}
-
-main img {
-    width: 80%;
-    max-width: 600px;
-    border-radius: 5%;
-}
 header .navbar li {
     display: inline-block;
 }
@@ -75,29 +50,40 @@ header .navbar a {
     text-shadow: #000000 0px 0px 4px;
     box-shadow: #000000 10px 10px 4px;
 }
+.navbar li, .navbar a {
+    min-width: 80px;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    border-radius: 20px;
+    color: #000000;
+    background-color: #f5f5f5;
+    text-shadow: black 0px 0px 0px;
+}
+
+.navbar .activepage a {
+    color: #000000;
+    background-color: #f5f5f5;
+    border-radius: 20px 20px 0px 0px;
+    text-shadow: black 0px 0px 0px;
+}
+
+
+}
+
+
+main img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5%;
+    
+}
 
 .landing {
-    padding: auto;
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: 60% auto;
-    grid-template-rows: auto auto auto;
+    display: inline-flexbox;
 }
-
-.landing img {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
-}
-
-.landing p {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    /* grid-row-start: 1;
-    grid-row-end: 2;    */
-}
-
 
 
 .album {
@@ -110,9 +96,11 @@ header .navbar a {
     margin: 20px;
     box-shadow: #8080f5 10px 10px 25px;
     text-align: center;
+    max-width: 350px;
 }
 
 .album img {
+    width: 80%;
     box-shadow: #000080 10px 10px 10px;
 }
 
@@ -125,8 +113,97 @@ header .navbar a {
     display: inline-flexbox;
 }
 
+.bio {
+    column-width: 400px;
+}
+
 footer {
-    height: 100px;
-    margin-top: 200pX;
+    display: relative;
+    font-size: 0.8em;
+    margin: 30px 0px 0px 0px;
+    max-width: 100vw;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 950px){
+    .landing {
+        display: grid;
+        grid-template-columns: 40% auto;
+        align-content: right; 
+    }
+
+    .landing img {
+        margin: auto;
+        
+        height: 80%;
+        border-radius: 10px;
+    }
+
+    .landing p {
+        font-size: 1.25em;
+    }
+}
+@media (max-width: 650px){
+    html {
+        color: #f5f5f5; 
+        background-color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        background: url(/assets/Sithu_Aye_@_Euroblast_2016_58.jpg) center fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0px;   
+    }
+
+    h1 {
+        text-shadow: #000000 0px 0px 4px;
+    }
+
+    main {
+        margin: 0%;
+        padding: 3%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px; 
+    } 
     
+    main p {
+        padding: 0px 5%;
+    }
+
+    .navbar ul {
+        display:inline;
+        margin 3%;
+        font-size: 1em;
+        position: sticky;
+        background-color: #f5f5f5;
+        padding: 10px;
+    }
+
+    header .navbar li {
+        padding 5px;
+        border-width: 1px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    header .navbar a {
+        color: #000000;
+        text-align: center;
+        display: contents;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 0px 0px 20px 20px;
+        
+    }
+    .navbar .activepage a {
+        color: #f5f5f5;
+        text-shadow: #000000 0px 0px 4px;
+        background-color: #000000;
+        border-style: solid;
+    }
+    .navbar li, .navbar a {
+        display: flex;
+        margin-top: 0px;
+        padding: 10px;
+    }
 }
