@@ -1,97 +1,100 @@
 body {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-between;
     color: #f5f5f5; 
     background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     background: url(/assets/Sithu_Aye_@_Euroblast_2016_58.jpg) center fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    margin: 0px;
+    margin: 0;
 }
 
-header .navbar {
-    text-align: center;
-    font-size: 2em;
+header {
+    
+    justify-content: center;
+}
+
+header .navbar ul {
+    display: inline-flex;
+    width: 90%;
+    max-width: 900px;
+    padding: 1px;
+    justify-content: center;
+    font-size: 1.5em;
     list-style-type: none;
+    margin: 0;
 }
 
-header .navbar li {
-    display: inline-block;
+.navbar li {
+    width: 100%;
+    box-sizing: content-box;
+    padding: 1% 2%;
+    border-radius: 0px 0px 20px 20px;
 }
 
-header .navbar a {
+.navbar a {
     display: block;
+    margin-bottom: 5px;
     text-decoration: none;
     color: #f5f5f5;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 0px 0px 20px 20px;
     text-shadow: #000000 0px 0px 4px;
+}
+
+li.activepage {
+    background-color: #f5f5f5;
     box-shadow: #000000 10px 10px 4px;
 }
-.navbar li, .navbar a {
-    min-width: 80px;
-    margin-top: 10px;
-    padding: 15px;
-}
-
-.navbar a:hover {
-    border-radius: 20px;
+li.activepage a{
     color: #000000;
-    background-color: #f5f5f5;
-    text-shadow: black 0px 0px 0px;
+    text-shadow: #000000 0px 0px 0px;
 }
-
-.navbar .activepage a {
-    color: #000000;
-    background-color: #f5f5f5;
-    border-radius: 20px 20px 0px 0px;
-    text-shadow: black 0px 0px 0px;
-}
-
 main {
-    margin: 5%
+    margin: 5%;
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 80px;
+    justify-content:flex-start;
 }
 
-main.landing {
-    display: flex;
-    flex-flow: column wrap;
+h1 {
+    text-shadow: #000000 0px 0px 10px;
+}
+
+main.landing p {
+    text-align: left;
 }
 
 main.landing img {
-    margin: 5%;
     border-radius: 4%;
-    align-self: center;
-    justify-self: right;
     flex-grow 1;
-    
 }
 
-.landing div.text-box {
-    margin:5%;
-    align-self: center;
-    justify-self: left;
-    flex-grow: 1;
-    
+.textbox p {
+    text-align: left;
 }
 
+.inline-wrapper {
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
 
 .album {
-    display: inline-block;
-    padding: 30px;
+    padding: 10px;
     background-color: #f5f5f5;
     border-radius: 30px;
     color: #000088;
-    padding 25px;
-    margin: 20px;
+    margin: 10px;
     box-shadow: #8080f5 10px 10px 25px;
     text-align: center;
-    max-width: 350px;
+    min-width: 200px;
+    max-width: 250px;    
 }
 
 .album img {
@@ -105,119 +108,65 @@ main.landing img {
 
 .album h2, h3 {
     text-align: center;
-    display: inline-flexbox;
 }
 
 main.bio {
-    display: flex;
-    flex-flow: column wrap;
     justify-items: center;
     align-items: flex-start;
-    flex-flow: column ;
+    
+} 
+
+.bio div {
+    max-width: 250px;
 }
 
-main.bio div {
-    max-width: 300px;
+.bio div p {
+    text-align: left;
 }
 
-main.bio img {
+
+.bio img {
     margin: auto;
     width: 80%;
     border-radius: 5%;
 }
 
 footer {
-    align-self: baseline;
+    align-self: flex-end;
     font-size: 0.8em;
-    margin: 5% 0px 0px 0px;
+    margin: 0;
     max-width: 100vw;
     border-radius: 20px 20px 0px 0px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 1100px){
+@media (min-width: 650px){
+    main {
+        display: flex;
+        flex-direction: row ;
+    }
+
     main.landing {
-        padding: 3%;        
+        padding: 3%;
+        max-width: 1600px;  
     }
     
     .landing img { 
         border-radius: 10px;
-    }
-
-    .landing p {
-        font-size: 1.25em;        
-    }
-}
-@media (max-width: 650px){
-    html {
-        color: #f5f5f5; 
-        background-color: #000000;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.9em;
-        background: url(/assets/Sithu_Aye_@_Euroblast_2016_58.jpg) center fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0px;   
-    }
-
-    h1 {
-        text-shadow: #000000 0px 0px 4px;
-    }
-
-    main {
-        display: block;
-        margin: 0%;
-        padding: 3%;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 20px;
-        align-content: center;
-        padding: 5%; 
-    } 
-    
-    .navbar ul {
-        display: inline;
-        margin 3%;
-        font-size: 1em;
-        position: sticky;
-        background-color: #f5f5f5;
-        padding: 10px;
-    }
-
-    header .navbar li {
-        padding 5px;
-        border-width: 1px;
-        border-radius: 0px 0px 10px 10px;
-    }
-
-    header .navbar a {
-        color: #000000;
-        text-align: center;
-        display: contents;
-        border-style: solid;
-        border-width: 3px;
-        border-radius: 0px 0px 20px 20px;
         
-    }
-    .navbar .activepage a {
-        color: #f5f5f5;
-        text-shadow: #000000 0px 0px 4px;
-        background-color: #000000;
-        border-style: solid;
-    }
-    .navbar li, .navbar a {
-        display: flex;
-        margin-top: 0px;
-        padding: 10px;
+        margin: 2%;
+        flex-grow: 1;
     }
 
-    
-    
-    .landing img {
-        min-width: 80%; 
+    div.text-box {
+        
+        flex-grow: 1;
+        max-width: 450px;
+        margin: 2%;
     }
 
-    .landing p{
-        min-width: 80%;
+    .textbox p {
+        font-size: 1.25em;
     }
 }
